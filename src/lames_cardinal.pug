@@ -1,20 +1,18 @@
 include components/components
 
++hiddenInput('page', 'personnage')
 main
     nav#menu.menu
         +navRadio('page', 'Personnage', 'personnage')
         +navRadio('page', 'Compétences', 'competences')
         +navRadio('page', 'Escrime', 'escrime')
-        //- +navRadio('page', 'Occultisme', 'occultisme')
         +navRadio('page', 'Ressources & contacts', 'ressources')
 
     div
         +swordbar()    
-        +hiddenInput('page', 'personnage')
         include modules/1-personnage/personnage
         include modules/2-competences/competences
         include modules/3-escrime/escrime
-        //- include modules/4-occultisme/occultisme
         include modules/4-ressources/ressources
 
 script(type='text/worker')

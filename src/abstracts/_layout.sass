@@ -18,10 +18,18 @@
     main
         margin-top: -20px
         margin-left: -8px
-        width: calc(100% + 15px)
+        width: 100%
         min-width: 845px
+        min-height: 590px
         flex-direction: row
         flex-wrap: wrap
+        background-size: 850px 1180px
+        background-repeat: no-repeat
+        background-origin: border-box
+    
+    nav#menu
+        height: 50px
+        flex-grow: 0
 
     #container
         flex: 1
@@ -35,7 +43,15 @@
     %showSection
         display: flex
 
-    $pages: 'personnage', 'competences', 'escrime', 'occultisme', 'ressources'
+    $pages: 'personnage', 'competences', 'escrime', 'ressources'
     @each $page in $pages
-        input[name=attr_page][value=#{$page}] ~ section#page-#{$page}
+        input[name=attr_page][value=#{$page}] ~ main section#page-#{$page}
             @extend %showSection
+    input[name=attr_page]
+        &[value='personnage'] ~ main,
+        &[value='competences'] ~ main
+            background-image: url("#{$IMAGES_ROOT}dragonrouge.jpg")
+
+        &[value='escrime'] ~ main,
+        &[value='ressources'] ~ main
+            background-image: url("#{$IMAGES_ROOT}dragonnoir.jpg")

@@ -19,10 +19,18 @@
 .charsheet main {
   margin-top: -20px;
   margin-left: -8px;
-  width: calc(100% + 15px);
+  width: 100%;
   min-width: 845px;
+  min-height: 590px;
   flex-direction: row;
   flex-wrap: wrap;
+  background-size: 850px 1180px;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+.charsheet nav#menu {
+  height: 50px;
+  flex-grow: 0;
 }
 .charsheet #container {
   flex: 1;
@@ -33,9 +41,16 @@
   flex-flow: column;
   width: 100%;
 }
-.charsheet input[name=attr_page][value=ressources] ~ section#page-ressources, .charsheet input[name=attr_page][value=occultisme] ~ section#page-occultisme, .charsheet input[name=attr_page][value=escrime] ~ section#page-escrime, .charsheet input[name=attr_page][value=competences] ~ section#page-competences, .charsheet input[name=attr_page][value=personnage] ~ section#page-personnage {
+.charsheet input[name=attr_page][value=ressources] ~ main section#page-ressources, .charsheet input[name=attr_page][value=escrime] ~ main section#page-escrime, .charsheet input[name=attr_page][value=competences] ~ main section#page-competences, .charsheet input[name=attr_page][value=personnage] ~ main section#page-personnage {
   display: flex;
 }
+.charsheet input[name=attr_page][value=personnage] ~ main, .charsheet input[name=attr_page][value=competences] ~ main {
+  background-image: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/dragonrouge.jpg");
+}
+.charsheet input[name=attr_page][value=escrime] ~ main, .charsheet input[name=attr_page][value=ressources] ~ main {
+  background-image: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/dragonnoir.jpg");
+}
+
 .charsheet h3, .charsheet h4 {
   font-family: "Arial";
   font-variant-caps: small-caps;
@@ -292,8 +307,8 @@
 
 .charsheet div#swordbar {
   display: flex;
-  width: 120px;
-  height: 100%;
+  width: 100px;
+  height: 415px;
   flex-direction: column;
   padding: 10px 41px;
   padding-top: 105px;
@@ -478,6 +493,24 @@
   display: flex;
   width: 25%;
   flex-direction: column;
+}
+.charsheet section#page-competences > div#caracs > div.skillblock > .carac > .icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-position: cover;
+}
+.charsheet section#page-competences > div#caracs > div.skillblock#griffe > .carac > .icon {
+  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/griffe.png");
+}
+.charsheet section#page-competences > div#caracs > div.skillblock#souffle > .carac > .icon {
+  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/souffle.png");
+}
+.charsheet section#page-competences > div#caracs > div.skillblock#sang > .carac > .icon {
+  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/sang.png");
+}
+.charsheet section#page-competences > div#caracs > div.skillblock#ecaille > .carac > .icon {
+  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/ecaille.png");
 }
 .charsheet section#page-competences > div#freeskills {
   margin-top: 15px;
