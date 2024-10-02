@@ -41,6 +41,13 @@
   flex-flow: column;
   width: 100%;
 }
+.charsheet div.repcontrol {
+  display: flex;
+}
+.charsheet div.repcontrol > .btn {
+  font-size: 0.85em;
+  padding: 2px;
+}
 .charsheet input[name=attr_page][value=ressources] ~ main section#page-ressources, .charsheet input[name=attr_page][value=escrime] ~ main section#page-escrime, .charsheet input[name=attr_page][value=competences] ~ main section#page-competences, .charsheet input[name=attr_page][value=personnage] ~ main section#page-personnage {
   display: flex;
 }
@@ -498,19 +505,22 @@
   width: 50px;
   height: 50px;
   display: block;
-  background-position: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: calc(50% - 40px);
 }
 .charsheet section#page-competences > div#caracs > div.skillblock#griffe > .carac > .icon {
-  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/griffe.png");
+  background-image: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/griffe.png");
 }
 .charsheet section#page-competences > div#caracs > div.skillblock#souffle > .carac > .icon {
-  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/souffle.png");
+  background-image: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/souffle.png");
 }
 .charsheet section#page-competences > div#caracs > div.skillblock#sang > .carac > .icon {
-  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/sang.png");
+  background-image: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/sang.png");
 }
 .charsheet section#page-competences > div#caracs > div.skillblock#ecaille > .carac > .icon {
-  background: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/ecaille.png");
+  background-image: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/ecaille.png");
 }
 .charsheet section#page-competences > div#freeskills {
   margin-top: 15px;
@@ -529,7 +539,7 @@
 .charsheet section#page-escrime {
   margin-top: 15px;
   flex-direction: row;
-  min-width: 700px;
+  min-width: 660px;
 }
 .charsheet section#page-escrime > .col-2 > h4 {
   width: 100%;
@@ -587,7 +597,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-between;
-  min-width: 700px;
+  min-width: 660px;
 }
 .charsheet section#page-ressources > .col-2 > h4 {
   width: 100%;
