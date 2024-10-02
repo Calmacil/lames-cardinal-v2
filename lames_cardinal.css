@@ -180,7 +180,7 @@
   padding: 0;
   border: 1px solid black;
   background: #eee;
-  margin: 5px 0;
+  margin: 2px 0;
 }
 .charsheet .nstate > .nstateopt {
   display: none;
@@ -292,12 +292,25 @@
 
 .charsheet div#swordbar {
   display: flex;
-  width: 100px;
+  width: 120px;
   height: 100%;
-  float: left;
   flex-direction: column;
-  padding: 20px 15px;
+  padding: 10px 41px;
+  padding-top: 105px;
   border-right: dotted 1px #395b63;
+  background-image: url("https://raw.githubusercontent.com/Calmacil/lames-cardinal-v2/refs/heads/main/assets/epee.png");
+  background-size: 100px 395px;
+  background-repeat: no-repeat;
+  flex-basis: content;
+}
+.charsheet div#swordbar label.healthboxwrapper {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
+.charsheet div#swordbar label.healthboxwrapper > span {
+  color: #395b63;
+  margin-left: 5px;
 }
 
 .charsheet .carac {

@@ -22,9 +22,12 @@ mixin nstateOption(value)
     description: This widget is used to store health issues
     arguments:
         - {string} name - The attribute name
-mixin healthBox(name)
-    +nstateBox(name).healthbox
-        +nstateOption(' ').health_ok
-        +nstateOption('/').health_tenacity
-        +nstateOption('X').health_wound
-        +nstateOption('\\').health_longTenacity
+mixin healthBox(name, letter=none)
+    label.healthboxwrapper
+        +nstateBox(name).healthbox
+            +nstateOption(' ').health_ok
+            +nstateOption('/').health_tenacity
+            +nstateOption('X').health_wound
+            +nstateOption('\\').health_longTenacity
+        if letter != none
+            span!= letter
